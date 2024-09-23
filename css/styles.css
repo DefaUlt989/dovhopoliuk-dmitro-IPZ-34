@@ -196,6 +196,7 @@ li {
 }
 
 .section-title {
+    text-align: center;
     font-size: 36px;
     font-weight: 700;
     letter-spacing: 0.03em;
