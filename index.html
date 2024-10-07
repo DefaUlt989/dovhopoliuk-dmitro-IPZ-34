@@ -46,7 +46,7 @@
 <main>
   <section class="personal-template">
     <h1 class="personal-template-title">Ефективні рішення для вашого бізнесу</h1>
-    <button type="button" class="order-button">Замовити послугу</button>
+    <button type="button" class="order-button" data-modal-open>Замовити послугу</button>
   </section>
   <section class="features">
     <div class="container">
@@ -413,5 +413,15 @@
     </div>
   </div>
 </footer>
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+    <button type="button" class="modal-close-btn" data-modal-close>
+      <svg class="modal_icon">
+        <use href="../images/svg/icons.svg#icon-close"></use>
+      </svg>
+    </button>
+  </div>
+</div>
+<script src="./js/modal.js"></script>
 </body>
 </html>
