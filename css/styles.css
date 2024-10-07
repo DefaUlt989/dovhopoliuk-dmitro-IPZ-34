@@ -7,6 +7,8 @@
     --grey: #757575;
     --white_button: #f5f4fa;
     --dominant_font: "Roboto", sans-serif;
+    --icon: #afb1b8;
+    --like_white: #f5f4fa;
 }
 
 body {
@@ -45,6 +47,8 @@ li {
     list-style-type: none;
 }
 
+/*header section*/
+
 .container {
     width: 1200px;
     padding-left: 15px;
@@ -65,9 +69,16 @@ li {
     align-items: center;
 }
 
+.header-icon{
+    margin-right: 10px;
+    align-self: center;
+    fill:currentColor;
+}
+
 .main-nav {
     display: flex;
     align-items: center;
+    margin-left: 93px;
 }
 
 .logo {
@@ -89,7 +100,6 @@ li {
 .nav-menu {
     display: flex;
     gap: 50px;
-    margin-left: 93px;
 }
 
 .nav-link {
@@ -106,8 +116,12 @@ li {
 
 .contact-info {
     display: flex;
+    align-items: center;
     margin-left: auto;
     gap: 40px;
+    color: var(--grey);
+    font-weight: 500;
+    letter-spacing: 0.02em;
 }
 
 .contact-link {
@@ -115,12 +129,18 @@ li {
     font-weight: 500;
     letter-spacing: 0.02em;
     transition: color 300ms ease-in-out;
+    display: flex;
+    align-items: center;
 }
+
 
 .contact-link:hover,
 .contact-link:focus {
     color: var(--blue);
 }
+
+/*personal-template section*/
+
 .personal-template {
     height: 600px;
     display: flex;
@@ -128,7 +148,7 @@ li {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/PersonalBack.png");
+    background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/main-background.jpg");
     background-size: cover;
 
 }
@@ -163,6 +183,8 @@ li {
     background-color: var(--light_blue);
 }
 
+/*features section*/
+
 .features {
     padding-top: 94px;
     padding-bottom: 94px;
@@ -191,6 +213,18 @@ li {
     letter-spacing: 0.03em;
 }
 
+.detail-list-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 100px;
+    margin-bottom: 30px;
+    background-color: var(--like_white);
+    border-radius: 4px;
+}
+
+/*services section*/
+
 .services {
     text-align: center;
     padding-bottom: 94px;
@@ -210,6 +244,8 @@ li {
     justify-content: center;
 }
 
+/*team section*/
+
 .team-section {
     background: var(--white_button);
     padding-bottom: 94px;
@@ -220,6 +256,7 @@ li {
     display: flex;
     justify-content: center;
     gap: 30px;
+    flex-wrap: nowrap;
 }
 
 .team-card {
@@ -228,12 +265,8 @@ li {
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px 0px rgba(0, 0, 0, 0.20);
 }
 
-.member-image {
-    margin-bottom: 30px;
-}
-
 .member-info {
-    padding-bottom: 30px;
+    padding: 30px;
 }
 
 .member-name {
@@ -242,6 +275,7 @@ li {
     font-weight: 500;
     letter-spacing: 0.03em;
     margin-bottom: 10px;
+
 }
 
 .member-position {
@@ -250,6 +284,82 @@ li {
     font-size: 16px;
     letter-spacing: 0.03em;
 }
+
+.members-social-links{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+.members-social-links li {
+    width: 44px;
+    height: 44px;
+}
+
+.social-links-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    color: var(--icon);
+    fill: currentColor;
+    transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
+}
+
+a.social-links-icons:hover,
+a.social-links-icons:focus {
+    background-color: var(--blue);
+    color: var(--white);
+    outline: none;
+}
+
+/*client section*/
+
+.clients{
+    text-align: center;
+    padding: 94px 0;
+    margin: 0;
+}
+
+.client-list{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 30px;
+}
+.clients-title{
+    color: var(--black);
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    word-wrap: break-word;
+    margin-bottom: 50px;}
+
+.client a{
+    border-radius: 4px;
+    border: 1px var(--icon) solid;
+    display: inline-block;
+    color: var(--icon);
+    transition: color 0.5s, border 0.5s;
+}
+.client a:hover,
+.client a:focus {
+    color: var(--blue);
+    border: 1px var(--blue) solid;
+}
+
+.client-logo{
+    width: 100%;
+    height: 100%;
+    padding: 16px 32px;
+    fill: currentColor;
+    transition: fill 0.5s;
+}
+
+/*footer section*/
 
 .footer {
     background: var(--primary_color);
@@ -290,6 +400,82 @@ li {
     color: var(--blue);
 }
 
+.footer .container{
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: baseline;
+}
+
+
+.footer-join{
+    color: var(--white);
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    margin-bottom: 20px;
+}
+
+.footer-social-links{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer-social-links li{
+    height: 44px;
+    width: 44px;
+}
+
+.footer-social-links-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    width: 100%;
+    height: 100%;
+
+    color: var(--white);
+    fill: currentColor;
+    transition: color 0.5s, background-color 0.5s;
+}
+
+.footer-social-links-icons:hover,
+.footer-social-links-icons:focus {
+    color: var(--white);
+    fill: currentColor;
+    background-color: var(--light_blue);
+}
+
+.contact-info-footer {
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 0.03em;
+    line-height: 1.14;
+    font-style: normal;
+}
+
+
+.contact-info-footer a {
+    transition: color 300ms ease-in-out;
+}
+
+.contact-info-footer a:hover, a:focus {
+    color: var(--blue);
+}
+
+.footer-content{
+    margin-right: 70px;
+}
+
+/*portfolio styles*/
+/*portfolio section*/
+
 .portfolio {
     padding-bottom: 94px;
     padding-top: 94px;
@@ -305,7 +491,6 @@ li {
 
 .filter-button {
     color: var(--black);
-    background: var(--white_button);
     text-align: center;
     padding: 6px 22px;
     border-radius: 4px;
@@ -319,8 +504,9 @@ li {
 
 .filter-button:hover,
 .filter-button:focus {
-    color: var(--white);
     background-color: var(--blue);
+    color: var(--white);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-list {
@@ -346,10 +532,9 @@ li {
 .portfolio-title {
     color: var(--black);
     font-size: 18px;
-    font-weight: 700;
     line-height: 2;
+    font-weight: 700;
     letter-spacing: 0.06em;
-    margin-bottom: 4px;
 }
 
 .portfolio-type {
@@ -358,3 +543,22 @@ li {
     line-height: 1.875;
     letter-spacing: 0.03em;
 }
+
+.portfolio-link {
+    display: block;
+    text-decoration: none;
+}
+
+
+.portfolio-link:hover,
+.portfolio-link:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.portfolio-item a{
+    display: inline-block;
+    transition: box-shadow 300ms ease-in-out;
+}
+
+
+
