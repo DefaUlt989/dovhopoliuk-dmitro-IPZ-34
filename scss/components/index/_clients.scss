@@ -4,12 +4,13 @@
     margin: 0;
 
     &-title{
-      color: var(--black);
+      color: $black;
       font-size: 36px;
       font-weight: 700;
       letter-spacing: 0.03em;
       word-wrap: break-word;
-      margin-bottom: 50px;}
+      margin-bottom: 50px;
+    }
 }
 
 .client-list{
@@ -22,15 +23,15 @@
 
 .client{
   a{    border-radius: 4px;
-    border: 1px var(--icon) solid;
+    border: 1px $icon solid;
     display: inline-block;
-    color: var(--icon);
+    color: $icon;
     padding: 16px 32px;
     transition: color 0.5s, border 0.5s;
         &:hover,
         &:focus {
-              color: var(--blue);
-              border: 1px var(--blue) solid;
+              color: $blue;
+              border: 1px var $blue solid;
                 }
     
       }

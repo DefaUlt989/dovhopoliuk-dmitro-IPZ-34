@@ -38,7 +38,7 @@
 }
 .portfolio-item {
 	border: 1px solid #EEE;
-	background: var(--white);
+	background: $white;
 	max-width: 370px;
 	a {
 		display: inline-block;
