@@ -19,13 +19,13 @@
             <span class="logo-blue">Web</span><span class="logo-black">Studio</span>
         </a>
         <nav class="main-nav">
-            <ul class="nav-menu">
+            <ul class="main-nav-menu">
                 <li><a href="index.html" class="nav-link-active">Студія</a></li>
                 <li><a href="portfolio.html" class="nav-link">Портфоліо</a></li>
                 <li><a href="#" class="nav-link">Контакти</a></li>
             </ul>
         </nav>
-        <ul class="contact-info">
+        <ul class="contact">
             <li>
                 <a href="mailto:info@devstudio.com" class="contact-link">
                     <svg class="header-icon" width="16" height="12">
@@ -114,9 +114,9 @@
                             width="370"
                             height="294"
                             class="service-image">
-                  <div class="service-box">
-                    <p class="service-text">Десктопні додатки</p>
-                  </div>
+                    <div class="service-box">
+                        <p class="service-text">Десктопні додатки</p>
+                    </div>
                 </li>
                 <li>
                     <img
@@ -125,9 +125,9 @@
                             width="370"
                             height="294"
                             class="service-image">
-                  <div class="service-box">
-                    <p class="service-text">Мобільні додатки</p>
-                  </div>
+                    <div class="service-box">
+                        <p class="service-text">Мобільні додатки</p>
+                    </div>
                 </li>
                 <li>
                     <img
@@ -136,9 +136,9 @@
                             width="370"
                             height="294"
                             class="service-image">
-                  <div class="service-box">
-                    <p class="service-text">Дизайнерські рішення</p>
-                  </div>
+                    <div class="service-box">
+                        <p class="service-text">Дизайнерські рішення</p>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -424,6 +424,20 @@
                 </li>
             </ul>
         </div>
+        <div class="subscribe">
+            <p class="subscribe-text">Підпишіться на розсилку</p>
+            <form class="subscribe-form">
+                <label class="subscribe-label-input"> <span class="visually-hidden">Email</span>
+                    <input type="email" class="subscribe-input" required placeholder="E-mail">
+                </label>
+                <button type="submit" class="subscribe-btn">
+                    Підписатися
+                    <svg class="subscribe-btn-svg" width="24" height="24">
+                        <use href="./images/svg/icons.svg#icon-send"></use>
+                    </svg>
+                </button>
+            </form>
+        </div>
     </div>
 </footer>
 <div class="backdrop is-hidden" data-modal>
@@ -433,6 +447,46 @@
                 <use href="./images/svg/icons.svg#icon-close"></use>
             </svg>
         </button>
+        <h2 class="modal-title">Залиште свої дані, ми вам передзвонимо</h2>
+        <form class="modal-form">
+            <label class="form-label">
+                <span class="label-text">Ім'я</span>
+                <input type="text" class="form-input" required>
+                <svg class="form-icon" fill="currentColor" width="18" height="18">
+                    <use href="./images/svg/icons.svg#icon-person-mod"></use>
+                </svg>
+            </label>
+            <label class="form-label">
+                <span class="label-text">Телефон</span>
+                <input type="text" class="form-input" required>
+                <svg class="form-icon" fill="currentColor" width="18" height="18">
+                    <use href="./images/svg/icons.svg#icon-phone-mod"></use>
+                </svg>
+            </label>
+            <label class="form-label">
+                <span class="label-text">Пошта</span>
+                <input type="email" class="form-input" required>
+                <svg class="form-icon" fill="currentColor" width="18" height="18">
+                    <use href="./images/svg/icons.svg#icon-mail-mod"></use>
+                </svg>
+            </label>
+            <label class="form-label">
+                <span class="label-text">Коментар</span>
+                <textarea name="" id="" class="form_textarea"  cols="30" rows="10" required placeholder="Введіть текст"></textarea>
+            </label>
+            <div class="checkbox-div">
+                <input class="input-accept" type="checkbox" id="accept" name="accept" value="accept">
+                <label for="accept" class="label-accept">
+                            <span>
+                                Погоджуюся з розсилкою та приймаю <a href="#" class="form-a">Умови договору</a>
+                            </span>
+                </label>
+            </div>
+            <div class="button-form-div">
+                <button type="submit" class="form-button">Відправити</button>
+            </div>
+
+        </form>
     </div>
 </div>
 <script src="./js/modal.js"></script>
