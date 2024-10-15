@@ -13,16 +13,10 @@
     }
 }
 
-.client-list{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    gap: 30px;
-}
-
 
 .client{
-  a{    border-radius: 4px;
+  a{    
+    border-radius: 4px;
     border: 1px $icon solid;
     display: inline-block;
     color: $icon;
@@ -41,6 +35,13 @@
         fill: currentColor;
         transition: fill 0.5s;
     }
+
+    &-list{
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      gap: 30px;
+  }
 }
 
 
