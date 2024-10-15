@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: "Roboto", sans-serif;
   color: #212121;
@@ -227,7 +228,6 @@ li {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 1;
 }
-
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
@@ -248,7 +248,6 @@ li {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .modal-close-btn {
   display: flex;
   position: absolute;
@@ -267,6 +266,13 @@ li {
 }
 .modal-close-btn:focus .modal_icon {
   fill: #2196f3;
+}
+
+.form-agree {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .modal_icon {
@@ -324,13 +330,13 @@ li {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-input:focus {
-  outline: 1px #2196f3 solid;
+  border: 1px #2196f3 solid;
 }
 .form-input:focus + .form-icon {
   color: #2196f3;
 }
 .form-input:hover {
-  outline: 1px #2196f3 solid;
+  border: 1px #2196f3 solid;
 }
 .form-input:hover + .form-icon {
   color: #2196f3;
@@ -374,21 +380,27 @@ li {
   color: #2196f3;
 }
 
-.input-accept:checked + .label-accept::before {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  background-color: #2196f3;
-  border: none;
-  background-image: url(../images/svg/icons.svg#icon-check);
-  background-repeat: no-repeat;
-  background-position: center;
+input[type=checkbox] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: #212121 1px solid;
+  height: 15px;
+  width: 16px;
+  color: #ffffff;
+  border-radius: 2px;
+  transition-duration: 0.5s;
 }
-.input-accept:focus + .label-accept::before {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  border-color: #2196f3;
+input[type=checkbox]:checked {
+  background: #2196f3;
+  border: none;
+  color: #ffffff;
+}
+input[type=checkbox]:checked::before {
+  content: "✔";
+  margin-left: 3px;
+  display: inline-block;
+  text-align: center;
 }
 
 .button-form-div {
