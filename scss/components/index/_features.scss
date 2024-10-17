@@ -1,0 +1,38 @@
+.features {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  &-list {
+    display: flex;
+    gap: 30px;
+  }
+
+  &-item {
+    max-width: 270px;
+  }
+}
+
+
+.feature-title {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.feature-description {
+  color: $grey;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.detail-list-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 100px;
+  margin-bottom: 30px;
+  background-color: $like-white;
+  border-radius: 4px;
+}
