@@ -15,6 +15,21 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+@media screen and (max-width: 1199.9px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .container {
+    max-width: 480px;
+  }
+}
 
 button {
   font: inherit;
@@ -148,6 +163,13 @@ li {
   background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/main-background.jpg");
   background-size: cover;
 }
+@media screen and (max-width: 767.9px) {
+  .personal-template {
+    height: auto;
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
 .personal-template-title {
   color: #ffffff;
   font-size: 44px;
@@ -181,6 +203,16 @@ li {
   padding: 94px 0;
   margin: 0;
 }
+@media screen and (max-width: 767.9px) {
+  .clients {
+    padding: 60px 0;
+  }
+}
+@media screen and (max-width: 1199.9px) {
+  .clients {
+    padding: 60px 0;
+  }
+}
 .clients-title {
   color: #212121;
   font-size: 36px;
@@ -188,6 +220,16 @@ li {
   letter-spacing: 0.03em;
   word-wrap: break-word;
   margin-bottom: 50px;
+}
+@media screen and (max-width: 767.9px) {
+  .clients-title {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 1199.9px) {
+  .clients-title {
+    margin-bottom: 30px;
+  }
 }
 
 .client a {
@@ -208,11 +250,27 @@ li {
   fill: currentColor;
   transition: fill 0.5s;
 }
+@media screen and (max-width: 767.9px) {
+  .client-logo {
+    padding: 16px 52px;
+  }
+}
 .client-list {
   display: flex;
   width: 100%;
   justify-content: center;
   gap: 30px;
+}
+@media screen and (max-width: 1199.9px) {
+  .client-list {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .client-list {
+    gap: 17px;
+    flex-wrap: wrap;
+  }
 }
 
 .backdrop {
@@ -246,6 +304,16 @@ li {
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (max-width: 1199.9px) {
+  .modal {
+    min-width: 450px;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .modal {
+    min-width: 92.5%;
+  }
 }
 .modal-close-btn {
   display: flex;
@@ -299,6 +367,12 @@ li {
 .label-text {
   display: block;
   margin-bottom: 4px;
+}
+@media screen and (max-width: 1199.9px) {
+  .label-text {
+    font-size: 12px;
+    white-space: nowrap;
+  }
 }
 
 .form-label {
@@ -379,6 +453,11 @@ li {
   text-decoration: underline;
   color: #2196f3;
 }
+@media screen and (max-width: 1199.9px) {
+  .form-a {
+    font-size: 12px;
+  }
+}
 
 input[type=checkbox] {
   -webkit-appearance: none;
@@ -434,12 +513,44 @@ input[type=checkbox]:checked::before {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+@media screen and (max-width: 767.9px) {
+  .features {
+    padding: 60px 0;
+  }
+}
+@media screen and (max-width: 1199.9px) {
+  .features {
+    padding: 60px 0;
+  }
+}
 .features-list {
   display: flex;
   gap: 30px;
 }
+@media screen and (max-width: 1199.9px) {
+  .features-list {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .features-list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 .features-item {
-  max-width: 270px;
+  flex: 1;
+}
+@media screen and (max-width: 767.9px) {
+  .features-item {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 1199.9px) {
+  .features-item {
+    max-width: 350px;
+    min-width: 290px;
+  }
 }
 
 .feature-title {
@@ -448,6 +559,11 @@ input[type=checkbox]:checked::before {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-bottom: 10px;
+}
+@media screen and (max-width: 767.9px) {
+  .feature-title {
+    text-align: center;
+  }
 }
 
 .feature-description {
@@ -465,11 +581,31 @@ input[type=checkbox]:checked::before {
   background-color: #f5f4fa;
   border-radius: 4px;
 }
+@media screen and (max-width: 1199.9px) {
+  .detail-list-icon {
+    padding: 25px 142px;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .detail-list-icon {
+    padding: 25px 100px;
+  }
+}
 
 .team-section {
   background: var(--white_button);
   padding-bottom: 94px;
   padding-top: 94px;
+}
+@media screen and (max-width: 767.9px) {
+  .team-section {
+    padding: 60px 0;
+  }
+}
+@media screen and (max-width: 1199.9px) {
+  .team-section {
+    padding: 60px 0;
+  }
 }
 
 .team-members {
@@ -477,6 +613,28 @@ input[type=checkbox]:checked::before {
   justify-content: center;
   gap: 30px;
   flex-wrap: nowrap;
+}
+@media screen and (max-width: 1199.9px) {
+  .team-members {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .team-members {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 1199.9px) {
+  .team-members__img {
+    width: 354px;
+    height: 374px;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .team-members__img {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .team-card {

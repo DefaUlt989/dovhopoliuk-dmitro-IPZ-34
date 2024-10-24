@@ -2,6 +2,12 @@
     text-align: center;
     padding: 94px 0;
     margin: 0;
+    @include mobile {
+      padding: 60px 0;
+    }
+    @include tablet {
+      padding: 60px 0;
+    }
 
     &-title{
       color: $black;
@@ -10,6 +16,12 @@
       letter-spacing: 0.03em;
       word-wrap: break-word;
       margin-bottom: 50px;
+      @include mobile{
+        margin-bottom: 30px;
+      }
+      @include tablet{
+        margin-bottom: 30px;
+      }
     }
 }
 
@@ -34,6 +46,9 @@
         height: 100%;
         fill: currentColor;
         transition: fill 0.5s;
+        @include mobile {
+          padding: 16px 52px;
+        }
     }
 
     &-list{
@@ -41,6 +56,13 @@
       width: 100%;
       justify-content: center;
       gap: 30px;
+      @include tablet {
+        flex-wrap: wrap;
+      }
+      @include mobile {
+        gap: 17px;
+        flex-wrap: wrap;
+      }
   }
 }
 

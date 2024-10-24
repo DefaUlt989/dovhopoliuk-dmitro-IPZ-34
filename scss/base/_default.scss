@@ -13,6 +13,15 @@ body {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+    @include desktop {
+    max-width: 1200px;
+  }
+  @include tablet {
+    max-width: 768px;
+  }
+  @include mobile {
+    max-width: 480px;
+  }
 }
 
 button {

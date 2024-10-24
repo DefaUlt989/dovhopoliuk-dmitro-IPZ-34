@@ -8,3 +8,22 @@ $light_blue: #188ce8;
 $icon: #afb1b8;
 $fonts: "Roboto", sans-serif;
 $white_button: "white_button: #f5f4fa";
+
+  
+  @mixin mobile {
+    @media screen and (max-width: 767.9px) {
+      @content;
+    }
+  }
+  
+  @mixin tablet {
+    @media screen and (max-width: 1199.9px) {
+      @content;
+    }
+  }
+  
+  @mixin desktop {
+    @media screen and (min-width: 1200px) {
+      @content;
+    }
+  }
