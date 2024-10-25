@@ -1,15 +1,10 @@
 .footer {
-	background: $primary_color;
-	padding-top: 60px;
-	padding-bottom: 60px;
-	
+	background-color: $primary_color;
 
 	.container {
-		width: 1200px;
-		padding-left: 15px;
-		padding-right: 15px;
-		margin-left: auto;
-		margin-right: auto;
+		gap: 94px;
+		padding-top: 60px;
+		padding-bottom: 60px;
 		display: flex;
 		align-items: baseline;
 		@include mobile {
@@ -23,26 +18,24 @@
 			justify-content: space-evenly;
 		  }
 	}
-
+	&-content,
+  	&-text-join,
+  	.subscribe {
+    	@include mobile {
+      	width: 100%;
+      	margin-left: 0;
+      	text-align: center;
+    	}
+    	@include tablet {
+      	margin-left: 0;
+      	text-align: center;
+    	}
+  	}
 	
 	.logo {
 		display: inline-block;
 		margin-bottom: 28px;
 	}
-	.contact-link {
-		color: rgba(255, 255, 255, 0.6);
-		&:hover {
-			color: $blue;
-		}
-		&:focus {
-			color: $blue;
-		}
-	}
-
-	&-content {
-		margin-right: 94px;
-	}
-
 	&-address {
 		line-height: 1.14;
 		letter-spacing: 0.03em;
@@ -55,22 +48,7 @@
 		text-transform: uppercase;
 		margin-bottom: 20px;
 	}
-	&-content, &-address,&-join{
-		@include mobile {
-			width: 100%;
-			margin-left: 0;
-		  }
-		  @include tablet {
-			margin-left: 0;
-		  }
-	
-		@include mobile {
-		  text-align: center;
-		}
-		@include tablet {
-		  text-align: center;
-		}
-	}
+
 	&-social-links {
 		display: flex;
 		width: 100%;
@@ -94,19 +72,13 @@
 		color: $white;
 		fill: currentColor;
 		transition: color 0.5s, background-color 0.5s;
-		&:hover {
-			color: $white;
-			fill: currentColor;
-			background-color: $light_blue;
-		}
-		&:focus {
+		&:hover,&:focus {
 			color: $white;
 			fill: currentColor;
 			background-color: $light_blue;
 		}
 	}
 }
-
 
 
 .address-list {
@@ -119,17 +91,26 @@
 .physical-address {
 	color: $white;
 	transition: color 300ms ease-in-out;
-	&:focus {
-		color: $blue;
-	}
-	&:hover {
+	&:focus,&:hover {
 		color: $blue;
 	}
 }
 
+.contact-link {
+	font-size: 14px;
+	&:hover,&:focus {
+		color: $blue;
+	}
+	@include mobile {
+		display: inline-block;
+		width: 100%;
+		text-align: center;
+  }
+	
+}
+
 .subscribe {
 	flex-grow: 1;
-	margin-left: 94px;
 
 	&-form {
 		display: flex;
@@ -172,10 +153,7 @@
 		line-height: 1.25;
 		letter-spacing: 0.03em;
 		color: $blue;
-		&:focus {
-			outline-color: $blue;
-		}
-		&:hover {
+		&:focus,&:hover {
 			outline-color: $blue;
 		}
 	}
@@ -201,10 +179,7 @@
 		@include mobile{
 			margin-left: 0;
 		}
-		&:hover {
-			background-color: $light_blue;
-		}
-		&:focus {
+		&:hover,&:focus {
 			background-color: $light_blue;
 		}
 	}
@@ -221,6 +196,7 @@
 		fill: currentColor;
 	}
 }
+
 
 .visually-hidden {
 	position: absolute;
