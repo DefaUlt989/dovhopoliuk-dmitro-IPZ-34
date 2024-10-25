@@ -8,6 +8,10 @@ body {
   font-weight: 400;
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 .container {
   width: 100%;
   padding-left: 15px;
@@ -25,6 +29,10 @@ body {
   .container {
     max-width: 480px;
   }
+}
+
+.hide {
+  display: none;
 }
 
 button {
@@ -1152,6 +1160,16 @@ input[type=checkbox]:checked::before {
   padding-bottom: 94px;
   padding-top: 94px;
 }
+@media screen and (max-width: 767.98px) {
+  .portfolio {
+    padding: 0;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199.9px) {
+  .portfolio {
+    padding: 0;
+  }
+}
 .portfolio-filter {
   display: flex;
   justify-content: center;
@@ -1159,15 +1177,40 @@ input[type=checkbox]:checked::before {
   gap: 8px;
   margin-bottom: 50px;
 }
+@media screen and (max-width: 767.98px) {
+  .portfolio-filter {
+    justify-content: normal;
+    flex-wrap: wrap;
+    max-width: 350px;
+    row-gap: 15px;
+    padding-top: 60px;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199.9px) {
+  .portfolio-filter {
+    padding-top: 60px;
+    margin-bottom: 40px;
+  }
+}
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+  padding-bottom: 94px;
 }
 .portfolio-item {
   border: 1px solid #EEE;
   background: #ffffff;
   max-width: 370px;
+  min-width: 290px;
+  flex: 1;
+}
+@media screen and (max-width: 767.98px) {
+  .portfolio-item {
+    width: 100%;
+    margin: 0;
+  }
 }
 .portfolio-item a {
   display: inline-block;
@@ -1181,6 +1224,19 @@ input[type=checkbox]:checked::before {
 }
 .portfolio-image {
   width: 100%;
+}
+@media screen and (min-width: 768px) and (max-width: 1199.9px) {
+  .portfolio-image {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .portfolio-image {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
 .portfolio-info {
   padding: 20px 23px;
@@ -1227,8 +1283,14 @@ input[type=checkbox]:checked::before {
   color: #ffffff;
   font-size: 18px;
   line-height: 1.56;
-  transform: translateY(100%);
+  transform: translateY(101%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (max-width: 767.98px) {
+  .portfolio-text-cover {
+    transform: translateY(134%);
+    padding: 77px 24px;
+  }
 }
 
 .filter-button {

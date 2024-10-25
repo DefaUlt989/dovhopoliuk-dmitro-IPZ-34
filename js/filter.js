@@ -1,5 +1,5 @@
-const filterButton = document.querySelectorAll(".button-list-item");
-const filterableCard = document.querySelectorAll(".project-list-element");
+const filterButton = document.querySelectorAll(".filter-button");
+const filterableCard = document.querySelectorAll(".portfolio-item");
 
 const filterCard = (e) => {
   document.querySelector(".active").classList.remove("active");
