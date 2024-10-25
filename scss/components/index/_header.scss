@@ -3,17 +3,32 @@
   display: flex;
   align-items: center;
   border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  @include tablet {
+    padding: 6px 0;
+  }
+  @include mobile {
+    padding: 10px 0;
+  }
 
 
   &-container {
     display: flex;
     align-items: center;
+    @include desktop {
+      justify-content: flex-start;
+    }
   }
 
   &-icon{
     margin-right: 10px;
     align-self: center;
     fill:currentColor;
+  }
+  nav {
+    @include desktop {
+      margin-left: 93px;
+    }
   }
 }
 
@@ -38,6 +53,9 @@
   display: flex;
   align-items: center;
   margin-left: 93px;
+  @include mobile {
+    display: none;
+  }
 
   &-menu {
     display: flex;
@@ -85,8 +103,6 @@
   }
 }
 
-
-
 .contact {
   display: flex;
   align-items: center;
@@ -95,6 +111,17 @@
   color: $grey;
   font-weight: 500;
   letter-spacing: 0.02em;
+  @include desktop {
+    margin-left: auto;
+  }
+  @include tablet {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+  @include mobile {
+    display: none;
+  }
 
   &-link {
     color: $grey;
@@ -103,6 +130,15 @@
     transition: color 300ms ease-in-out;
     display: flex;
     align-items: center;
+    @include tablet {
+      font-size: 12px;
+      padding: 0px;
+    }
+
+    @include desktop {
+      font-size: inherit;
+    }
+
 
 
     &:hover,

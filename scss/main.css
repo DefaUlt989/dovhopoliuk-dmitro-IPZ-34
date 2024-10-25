@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -63,15 +63,36 @@ li {
   display: flex;
   align-items: center;
   border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+}
+@media screen and (max-width: 1199.9px) {
+  .header {
+    padding: 6px 0;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .header {
+    padding: 10px 0;
+  }
 }
 .header-container {
   display: flex;
   align-items: center;
 }
+@media screen and (min-width: 1200px) {
+  .header-container {
+    justify-content: flex-start;
+  }
+}
 .header-icon {
   margin-right: 10px;
   align-self: center;
   fill: currentColor;
+}
+@media screen and (min-width: 1200px) {
+  .header nav {
+    margin-left: 93px;
+  }
 }
 
 .logo {
@@ -92,6 +113,11 @@ li {
   display: flex;
   align-items: center;
   margin-left: 93px;
+}
+@media screen and (max-width: 767.9px) {
+  .main-nav {
+    display: none;
+  }
 }
 .main-nav-menu {
   display: flex;
@@ -141,6 +167,23 @@ li {
   font-weight: 500;
   letter-spacing: 0.02em;
 }
+@media screen and (min-width: 1200px) {
+  .contact {
+    margin-left: auto;
+  }
+}
+@media screen and (max-width: 1199.9px) {
+  .contact {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .contact {
+    display: none;
+  }
+}
 .contact-link {
   color: #757575;
   font-weight: 500;
@@ -148,6 +191,17 @@ li {
   transition: color 300ms ease-in-out;
   display: flex;
   align-items: center;
+}
+@media screen and (max-width: 1199.9px) {
+  .contact-link {
+    font-size: 12px;
+    padding: 0px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact-link {
+    font-size: inherit;
+  }
 }
 .contact-link:hover, .contact-link:focus {
   color: #2196f3;
@@ -756,6 +810,20 @@ input[type=checkbox]:checked::before {
   display: flex;
   align-items: baseline;
 }
+@media screen and (max-width: 767.9px) {
+  .footer .container {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 1199.9px) {
+  .footer .container {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
 .footer .logo {
   display: inline-block;
   margin-bottom: 28px;
@@ -782,6 +850,27 @@ input[type=checkbox]:checked::before {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-bottom: 20px;
+}
+@media screen and (max-width: 767.9px) {
+  .footer-content, .footer-address, .footer-join {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 1199.9px) {
+  .footer-content, .footer-address, .footer-join {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .footer-content, .footer-address, .footer-join {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1199.9px) {
+  .footer-content, .footer-address, .footer-join {
+    text-align: center;
+  }
 }
 .footer-social-links {
   display: flex;
@@ -838,8 +927,37 @@ input[type=checkbox]:checked::before {
 .subscribe-form {
   display: flex;
 }
+@media screen and (max-width: 1199.9px) {
+  .subscribe-form {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .subscribe-form {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+}
 .subscribe-label-input {
   flex-grow: 1;
+}
+@media screen and (max-width: 767.9px) {
+  .subscribe-label-input {
+    width: 100%;
+    max-width: 450px;
+  }
+}
+@media screen and (max-width: 1199.9px) {
+  .subscribe-label-input {
+    width: 100%;
+    max-width: 450px;
+  }
 }
 .subscribe-input {
   width: 100%;
@@ -874,6 +992,16 @@ input[type=checkbox]:checked::before {
   display: flex;
   align-items: center;
   transition: background-color 300ms ease-in-out;
+}
+@media screen and (max-width: 1199.9px) {
+  .subscribe-btn {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .subscribe-btn {
+    margin-left: 0;
+  }
 }
 .subscribe-btn:hover {
   background-color: #188ce8;
