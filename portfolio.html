@@ -21,8 +21,8 @@
         </a>
         <nav class="main-nav">
             <ul class="main-nav-menu">
-                <li><a href="index.html" class="nav-link">Студія</a></li>
-                <li><a href="portfolio.html" class="nav-link-active">Портфоліо</a></li>
+                <li><a href="index.html" class="nav-link-active">Студія</a></li>
+                <li><a href="portfolio.html" class="nav-link">Портфоліо</a></li>
                 <li><a href="#" class="nav-link">Контакти</a></li>
             </ul>
         </nav>
@@ -44,6 +44,55 @@
                 </a>
             </li>
         </ul>
+        <button class="mobile-button " type="button" data-menu-button aria-expanded="false">
+            <svg class="mobile-button-icon">
+                <use class="mobile-button--close" href="./images/svg/icons.svg#icon-burger-close"></use>
+                <use class="mobile-button--open " href="./images/svg/icons.svg#icon-burger-open"></use>
+            </svg>
+        </button>
+    </div>
+    <div class="mobile" data-menu>
+        <nav class="mobile-menu">
+            <ul class="mobile-menu-list">
+                <li class="mobile-menu-item">
+                    <a href="./index.html" class="mobile-menu-link ">Студія</a>
+                </li>
+                <li class="mobile-menu-item">
+                    <a href="./portfolio.html" class="mobile-menu-link">Портфоліо</a>
+                </li>
+                <li class="mobile-menu-item">
+                    <a href="" class="mobile-menu-link">Контакти</a>
+                </li>
+            </ul>
+        </nav>
+        <ul class="mobile-contacts-list">
+            <li class="mobile-contacts-item">
+                <a
+                        class="mobile-contacts-link link mobile-contacts-link--blue"
+                        href="tel:+380961111111"
+                >+380961111111</a
+                >
+            </li>
+            <li class="mobile-contacts-item">
+                <a class="mobile-contacts-link" href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+                >
+            </li>
+        </ul>
+        <ul class="mobile-social-list">
+            <li class="mobile-social-item">
+                <a class="mobile-social-link" href="">Instagram</a>
+            </li>
+            <li class="mobile-social-item">
+                <a class="mobile-social-link" href="">Twitter</a>
+            </li>
+            <li class="mobile-social-item">
+                <a class="mobile-social-link" href="">Facebook</a>
+            </li>
+            <li class="mobile-social-item">
+                <a class="mobile-social-link" href="">LinkedIn</a>
+            </li>
+        </ul>
     </div>
 </header>
 <main>
@@ -51,23 +100,23 @@
     <div class="container">
       <ul class="portfolio-filter">
         <li>
-          <button type="button" class="filter-button">Усі</button>
+          <button type="button" class="filter-button active" data-name="all">Усі</button>
         </li>
         <li>
-          <button type="button" class="filter-button">Веб-сайти</button>
+          <button type="button" class="filter-button" data-name="web">Веб-сайти</button>
         </li>
         <li>
-          <button type="button" class="filter-button">Додатки</button>
+          <button type="button" class="filter-button" data-name="app">Додатки</button>
         </li>
         <li>
-          <button type="button" class="filter-button">Дизайн</button>
+          <button type="button" class="filter-button" data-name="design">Дизайн</button>
         </li>
         <li>
-          <button type="button" class="filter-button">Маркетинг</button>
+          <button type="button" class="filter-button" data-name="marketing">Маркетинг</button>
         </li>
       </ul>
       <ul class="portfolio-list">
-        <li class="portfolio-item">
+        <li class="portfolio-item" data-name="web">
           <a href="#" class="portfolio-link">
             <div class="portfolio-wrap">
               <img
@@ -85,7 +134,7 @@
             </div>
           </a>
         </li>
-        <li class="portfolio-item">
+        <li class="portfolio-item" data-name="design">
           <a href="#" class="portfolio-link">
             <div class="portfolio-wrap">
               <img
@@ -105,7 +154,7 @@
             </div>
           </a>
         </li>
-        <li class="portfolio-item">
+        <li class="portfolio-item" data-name="app">
           <a href="#" class="portfolio-link">
             <div class="portfolio-wrap">
               <img
@@ -123,7 +172,7 @@
             </div>
           </a>
         </li>
-        <li class="portfolio-item">
+        <li class="portfolio-item" data-name="marketing">
           <a href="#" class="portfolio-link">
             <div class="portfolio-wrap">
               <img
@@ -141,7 +190,7 @@
             </div>
           </a>
         </li>
-        <li class="portfolio-item">
+        <li class="portfolio-item" data-name="app">
           <a href="#" class="portfolio-link">
             <div class="portfolio-wrap">
               <img
@@ -159,7 +208,7 @@
             </div>
           </a>
         </li>
-        <li class="portfolio-item">
+        <li class="portfolio-item" data-name="web">
           <a href="#" class="portfolio-link">
             <div class="portfolio-wrap">
               <img
@@ -177,7 +226,7 @@
             </div>
           </a>
         </li>
-        <li class="portfolio-item">
+        <li class="portfolio-item" data-name="design">
           <a href="#" class="portfolio-link">
             <div class="portfolio-wrap">
               <img
@@ -213,7 +262,7 @@
             </div>
           </a>
         </li>
-        <li class="portfolio-item">
+        <li class="portfolio-item" data-name="app">
           <a href="#" class="portfolio-link">
             <div class="portfolio-wrap">
               <img
@@ -304,5 +353,7 @@
     </div>
   </div>
 </footer>
+<script src="./js/menu.js"></script>
+<script src="./js/filter.js"></script>
 </body>
 </html>
